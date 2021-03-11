@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 import AppRoutes from "./routes";
 
+import "bulma/css/bulma.css";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
