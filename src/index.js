@@ -1,14 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-import AppRoutes from "./routes";
+import AppRoutes from './routes';
 
-import "bulma/css/bulma.css";
-import "./index.css";
-import reportWebVitals from "./reportWebVitals";
+import 'bootstrap/dist/css/bootstrap.css';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById('root');
 
 const renderApp = (Component) => {
   ReactDOM.render(

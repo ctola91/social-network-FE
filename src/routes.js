@@ -1,7 +1,7 @@
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch } from 'react-router-dom';
 
-import App from "./components/App";
-import Home from "./components/Home/Home";
+import App from './components/App';
+import Home from './components/Home/Home';
 import Pomodoro from './components/Pomodoro/Timer';
 import Numbers from './components/Numbers/Numbers';
 import Person from './components/Person/Person';
