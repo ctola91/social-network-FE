@@ -1,3 +1,4 @@
+import { element } from 'prop-types';
 import Content from '../shared/components/layout/Content';
 import Footer from '../shared/components/layout/Footer';
 import Header from '../shared/components/layout/Header';
@@ -10,5 +11,9 @@ const App = (props) => (
     <Footer />
   </div>
 );
+
+App.propTypes = {
+  children: element,
+};
 
 export default App;
