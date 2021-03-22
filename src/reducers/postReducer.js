@@ -27,11 +27,11 @@ export default function postReducer(state = initialState, action) {
     }
     case FETCH_POSTS_SUCCESS: {
       const {
-        payload: { posts, total },
+        payload: { posts, count },
       } = action; // const posts = action.payload.posts
       return getNewState(state, {
         posts,
-        total,
+        total: count,
         isLoading: false,
       });
     }
