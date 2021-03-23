@@ -7,3 +7,4 @@ export const PROJECT_ID = process.env.REACT_APP_PROJECT_ID || '';
 export const MESSAGING_SENDER_ID = process.env.REACT_APP_MESSAGING_SENDER_ID || '';
 export const STORAGE_BUCKET = process.env.REACT_APP_STORAGE_BUCKET || '';
 export const APP_ID = process.env.REACT_APP_APP_ID || '';
+export const itemsPerPage = 5;

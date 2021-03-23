@@ -14,7 +14,7 @@ class Home extends Component {
   }
 
   render() {
-    const { posts, isLoading, total } = this.props;
+    const { posts, isLoading, total, fetchPosts } = this.props;
     return isLoading ? (
       <div className="Home">
         <h1>Cargando...</h1>
@@ -23,7 +23,7 @@ class Home extends Component {
       <div className="Home">
         <h1>Posts</h1>
         <HomeList posts={posts} total={total} />
-        <HomePagination />
+        <HomePagination fetchPosts={fetchPosts} total={total} />
       </div>
     );
   }
