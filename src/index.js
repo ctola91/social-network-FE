@@ -7,6 +7,7 @@ import AppRoutes from './routes';
 import configureStore from './shared/redux/configureStore';
 
 import 'bootstrap/dist/css/bootstrap.css';
+
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 

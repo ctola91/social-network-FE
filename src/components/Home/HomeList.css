@@ -1,0 +1,6 @@
+.HomeList {
+    display: flex;
+    max-width: 600px;
+    margin: auto;
+    flex-wrap: wrap;
+}

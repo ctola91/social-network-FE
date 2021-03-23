@@ -2,8 +2,9 @@ import API from '../api/api';
 
 const URL_POSTS = '/posts';
 
-const getPosts = async () => {
-  const response = await API.get(`${URL_POSTS}`);
+const getPosts = async (from = 0, limit = 5) => {
+  const queryParams = `?from=${from}&limit=${limit}`;
+  const response = await API.get(`${URL_POSTS}${queryParams}`);
   if (response.error) {
     throw new Error('Ha ocurrido un error');
   }

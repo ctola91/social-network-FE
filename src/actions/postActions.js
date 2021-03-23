@@ -19,10 +19,10 @@ import {
   UPDATE_POST_SUCCESS,
 } from './actionTypes';
 
-export const fetchPosts = () => async (dispatch) => {
+export const fetchPosts = (from, limit) => async (dispatch) => {
   dispatch(request(FETCH_POSTS_REQUEST));
   try {
-    const response = await PostService.getPosts();
+    const response = await PostService.getPosts(from, limit);
     dispatch(received(FETCH_POSTS_SUCCESS, response.data));
   } catch (err) {
     dispatch(error(FETCH_POSTS_ERROR));
