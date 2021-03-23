@@ -1,4 +1,4 @@
-// import { actions } from 'react-redux-form';
+import { actions } from 'react-redux-form';
 import PostService from '../services/PostService';
 import { request, received, error } from '../shared/redux/baseActions';
 import {
@@ -79,6 +79,6 @@ export const deletePost = (id) => async (dispatch) => {
   }
 };
 
-// export const resetPostForm = () => (dispatch) => {
-//   dispatch(actions.reset('postForm'));
-// };
+export const resetPostForm = () => (dispatch) => {
+  dispatch(actions.reset('postForm'));
+};
