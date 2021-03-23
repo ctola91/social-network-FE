@@ -9,6 +9,7 @@ import Calculator from './components/Calculator/Calculator';
 import Create from './components/Create';
 import Login from './components/Login';
 import Error404 from './components/Error/404';
+import AppHooks from './Hooks/App';
 
 const AppRoutes = () => (
   <App>
@@ -20,6 +21,7 @@ const AppRoutes = () => (
       <Route path="/calculator" component={Calculator} exact />
       <Route path="/create" component={Create} exact />
       <Route path="/login" component={Login} exact />
+      <Route path="/hooks" component={AppHooks} exact />
       <Route component={Error404} />
     </Switch>
   </App>
