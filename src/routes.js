@@ -9,6 +9,8 @@ import Person from './components/Person/Person';
 import Calculator from './components/Calculator/Calculator';
 import CalculatorHook from './components/Calculator/CalculatorHook';
 import Create from './components/Create';
+import User from './components/User/User';
+import CreateUser from './components/CreateUser/CreateUser';
 import Login from './components/Login';
 import Error404 from './components/Error/404';
 import AppHooks from './hooks/App';
@@ -26,6 +28,8 @@ const AppRoutes = () => (
       <Route path="/create" component={Create} exact />
       <Route path="/login" component={Login} exact />
       <Route path="/hooks" component={AppHooks} exact />
+      <Route path="/users" component={User} exact />
+      <Route path="/users/create" component={CreateUser} exact />
       <Route component={Error404} />
     </Switch>
   </App>
