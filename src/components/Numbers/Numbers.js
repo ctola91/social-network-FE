@@ -27,6 +27,7 @@ class Numbers extends Component {
   render() {
     return (
       <div className="Numbers">
+        <h1>Numbers</h1>
         <input type="number" value={this.state.numbers} onChange={this.handleNumberChange} />
         <ul>
           {this.state.results.map((result, i) => (
