@@ -9,7 +9,7 @@ const HomeListItem = ({ post }) => (
   <Card className="HomeListItem">
     <CardImg top width="100%" src="https://picsum.photos/200/150" alt="Post Image" />
     <CardBody>
-      <CardText>{post.description}</CardText>
+      <CardText className="description">{post.description}</CardText>
     </CardBody>
     <CardFooter>
       <Button>
