@@ -34,9 +34,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false",
+    "test:watch": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --ext .jsx,.js src"
+    "lint": "eslint --ext .jsx,.js src",
+    "prebuild": "yarn lint && yarn test"
   },
   "eslintConfig": {
     "extends": [
@@ -61,6 +63,7 @@
     "enzyme-adapter-react-16": "^1.15.6",
     "eslint-config-airbnb": "^18.2.1",
     "fetch-mock": "^9.11.0",
+    "husky": "4",
     "redux-mock-store": "^1.5.4"
   }
 }
