@@ -1,4 +1,5 @@
-import { useState } from 'react';
+/* eslint-disable react/jsx-props-no-spreading */
+import { useContext, useState } from 'react';
 import {
   DropdownItem,
   DropdownMenu,
@@ -13,14 +14,15 @@ import {
   NavLink,
   UncontrolledDropdown,
 } from 'reactstrap';
+import ThemeContext from '../../../context/ThemeContext';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const { theme } = useContext(ThemeContext);
   const toggle = () => setIsOpen(!isOpen);
   return (
     <header>
-      <Navbar color="light" light expand="md">
+      <Navbar color={theme} light={(theme === 'light')} dark={(theme === 'dark')} expand="md">
         <NavbarBrand href="/">reactstrap</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>

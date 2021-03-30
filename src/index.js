@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 
 import AppRoutes from './routes';
 import configureStore from './shared/redux/configureStore';
+import ThemeContext from './context/ThemeContext';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -13,15 +14,20 @@ import reportWebVitals from './reportWebVitals';
 
 const rootElement = document.getElementById('root');
 const store = configureStore(window.initialState);
+const themes = {
+  theme: 'light',
+};
 
 const renderApp = (Component) => {
   ReactDOM.render(
     <React.StrictMode>
-      <Provider store={store}>
-        <Router>
-          <Component />
-        </Router>
-      </Provider>
+      <ThemeContext.Provider value={themes}>
+        <Provider store={store}>
+          <Router>
+            <Component />
+          </Router>
+        </Provider>
+      </ThemeContext.Provider>
     </React.StrictMode>,
     rootElement
   );

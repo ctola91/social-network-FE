@@ -31,7 +31,7 @@ const getUsers = async () => {
 //   }
 // };
 
-const addUser = async (user, image) => {
+const addUser = async (user) => {
 //   uploadImage(image, user.name.split(' ').join('_'));
   const response = await API.post(`${URL_USERS}`, user);
   if (response.error) {
